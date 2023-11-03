@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #a49c56;}
+.s2 { color: #939293;}
+.s3 { color: #ff6b99; font-style: italic;}
+.s4 { color: #397e83;}
+.s5 { color: #5f9247;}
+</style>
+</head>
+<body bgcolor="#fffaff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre>import <span class="s1">'package:flutter/cupertino.dart'</span><span class="s2">;</span>
+import <span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+main<span class="s2">(){</span>
+  runApp<span class="s2">(</span><span class="s3">const </span>MyApp<span class="s2">());</span>
+<span class="s2">}</span>
+
+
+<span class="s3">class </span>MyApp <span class="s3">extends </span>StatelessWidget<span class="s2">{</span>
+  <span class="s3">const </span>MyApp<span class="s2">({</span><span class="s3">super</span><span class="s2">.</span>key<span class="s2">});</span>
+
+  @override
+  Widget build<span class="s2">(</span>BuildContext context<span class="s2">) {</span>
+
+    <span class="s3">return  </span>MaterialApp<span class="s2">(</span>
+        theme<span class="s4">: </span>ThemeData<span class="s2">(</span>primarySwatch<span class="s4">: </span>Colors<span class="s2">.</span>brown<span class="s2">),</span>
+        darkTheme<span class="s4">: </span>ThemeData<span class="s2">(</span>primarySwatch<span class="s4">:</span>Colors<span class="s2">.</span>blue<span class="s2">),</span>
+        color<span class="s4">: </span>Colors<span class="s2">.</span>amber<span class="s2">,</span>
+        debugShowCheckedModeBanner<span class="s4">: </span><span class="s3">false</span><span class="s2">,</span>
+        home<span class="s4">: </span>HomeActivity<span class="s2">()</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+<span class="s3">class </span>HomeActivity <span class="s3">extends </span>StatelessWidget<span class="s2">{</span>
+  <span class="s3">const </span>HomeActivity<span class="s2">({</span><span class="s3">super</span><span class="s2">.</span>key<span class="s2">});</span>
+
+
+  MySnackBar<span class="s2">(</span>message<span class="s2">,</span>context<span class="s2">){</span>
+
+    <span class="s3">return </span>ScaffoldMessenger<span class="s2">.</span>of<span class="s2">(</span>context<span class="s2">).</span>showSnackBar<span class="s2">(</span>
+        SnackBar<span class="s2">(</span>content<span class="s4">: </span>Text<span class="s2">(</span>message<span class="s2">))</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+
+
+  @override
+  Widget build<span class="s2">(</span>BuildContext context<span class="s2">) {</span>
+    <span class="s3">return</span>
+      Scaffold<span class="s2">(</span>
+
+          appBar<span class="s4">: </span>AppBar<span class="s2">(</span>
+            title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Inventory app&quot;</span><span class="s2">),</span>
+            titleSpacing<span class="s4">: </span><span class="s5">10</span><span class="s2">,</span>
+            centerTitle<span class="s4">: </span><span class="s3">false</span><span class="s2">,</span>
+            toolbarHeight<span class="s4">: </span><span class="s5">60</span><span class="s2">,</span>
+            toolbarOpacity<span class="s4">: </span><span class="s5">1</span><span class="s2">,</span>
+            elevation<span class="s4">: </span><span class="s5">1</span><span class="s2">,</span>
+            backgroundColor<span class="s4">: </span>Colors<span class="s2">.</span>red<span class="s2">,</span>
+            actions<span class="s4">: </span><span class="s2">[</span>
+              IconButton<span class="s2">(</span>onPressed<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;I am fine&quot;</span><span class="s2">, </span>context<span class="s2">);}, </span>icon<span class="s4">:</span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>comment<span class="s2">)),</span>
+              IconButton<span class="s2">(</span>onPressed<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Let me search&quot;</span><span class="s2">, </span>context<span class="s2">);}, </span>icon<span class="s4">:</span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>search<span class="s2">)),</span>
+              IconButton<span class="s2">(</span>onPressed<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;You Hate me&quot;</span><span class="s2">, </span>context<span class="s2">);}, </span>icon<span class="s4">:</span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>settings<span class="s2">)),</span>
+              IconButton<span class="s2">(</span>onPressed<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;I Love You&quot;</span><span class="s2">, </span>context<span class="s2">);}, </span>icon<span class="s4">:</span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>email<span class="s2">)),</span>
+            <span class="s2">],</span>
+
+          <span class="s2">),</span>
+          floatingActionButton<span class="s4">: </span>FloatingActionButton<span class="s2">(</span>
+            elevation<span class="s4">: </span><span class="s5">10</span><span class="s2">,</span>
+            child<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>add<span class="s2">),</span>
+            backgroundColor<span class="s4">: </span>Colors<span class="s2">.</span>red<span class="s2">,</span>
+            onPressed<span class="s4">: </span><span class="s2">(){</span>
+              MySnackBar<span class="s2">(</span><span class="s1">&quot;I am floating action button &quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+            <span class="s2">},</span>
+          <span class="s2">),</span>
+          bottomNavigationBar<span class="s4">: </span>BottomNavigationBar<span class="s2">(</span>
+            currentIndex<span class="s4">: </span><span class="s5">1</span><span class="s2">,</span>
+            items<span class="s4">: </span><span class="s2">[</span>
+              BottomNavigationBarItem<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>home<span class="s2">),</span>label<span class="s4">: </span><span class="s1">&quot;Home&quot;</span><span class="s2">),</span>
+              BottomNavigationBarItem<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>message<span class="s2">),</span>label<span class="s4">: </span><span class="s1">&quot;Contact&quot;</span><span class="s2">),</span>
+              BottomNavigationBarItem<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>person<span class="s2">),</span>label<span class="s4">: </span><span class="s1">&quot;Profile&quot;</span><span class="s2">),</span>
+            <span class="s2">],</span>
+            onTap<span class="s4">: </span><span class="s2">(</span>int index<span class="s2">){</span>
+              <span class="s3">if</span><span class="s2">(</span>index <span class="s4">== </span><span class="s5">0</span><span class="s2">){</span>
+                MySnackBar<span class="s2">(</span><span class="s1">&quot;Home bottom menu &quot;</span><span class="s2">,</span>context<span class="s2">);</span>
+              <span class="s2">}</span>
+              <span class="s3">if</span><span class="s2">(</span>index <span class="s4">== </span><span class="s5">1</span><span class="s2">){</span>
+                MySnackBar<span class="s2">(</span><span class="s1">&quot;Contact menu bar &quot;</span><span class="s2">,</span>context<span class="s2">);</span>
+              <span class="s2">}</span>
+              <span class="s3">if</span><span class="s2">(</span>index<span class="s4">== </span><span class="s5">2</span><span class="s2">){</span>
+                MySnackBar<span class="s2">(</span><span class="s1">&quot;Profile menu &quot;</span><span class="s2">,</span>context<span class="s2">);</span>
+              <span class="s2">}</span>
+            <span class="s2">},</span>
+          <span class="s2">),</span>
+          drawer<span class="s4">: </span>Drawer<span class="s2">(</span>
+            child<span class="s4">:</span>ListView<span class="s2">(</span>
+              children<span class="s4">: </span><span class="s2">[</span>
+                DrawerHeader<span class="s2">(</span>
+                    padding<span class="s4">: </span>EdgeInsets<span class="s2">.</span>all<span class="s2">(</span><span class="s5">10</span><span class="s2">),</span>
+                    child<span class="s4">: </span>UserAccountsDrawerHeader<span class="s2">(</span>
+                      decoration<span class="s4">: </span>BoxDecoration<span class="s2">(</span>color<span class="s4">:</span>Colors<span class="s2">.</span>purpleAccent<span class="s2">),</span>
+                      accountName<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Salman_farid&quot;</span><span class="s2">),</span>
+                      accountEmail<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Info@salman.com&quot;</span><span class="s2">),</span>
+                      currentAccountPicture<span class="s4">:</span>Image<span class="s2">.</span>network<span class="s2">(</span><span class="s1">&quot;https://assets.website-files.com/60d251a34163cf29e1220806/626accd8eefaec54f23310ba_flutter%20developer%20logo.png&quot;</span><span class="s2">) ,</span>
+                    <span class="s2">)</span>
+                <span class="s2">),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>home<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Home&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Home&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>email<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Email&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Email: salmanfarid43@gmail.com&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>phone<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Phone&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Phone:01300192216&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+              <span class="s2">],</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          endDrawer<span class="s4">: </span>Drawer<span class="s2">(</span>
+            child<span class="s4">:</span>ListView<span class="s2">(</span>
+              children<span class="s4">: </span><span class="s2">[</span>
+                DrawerHeader<span class="s2">(</span>
+                    padding<span class="s4">: </span>EdgeInsets<span class="s2">.</span>all<span class="s2">(</span><span class="s5">10</span><span class="s2">),</span>
+                    child<span class="s4">: </span>UserAccountsDrawerHeader<span class="s2">(</span>
+                      decoration<span class="s4">: </span>BoxDecoration<span class="s2">(</span>color<span class="s4">:</span>Colors<span class="s2">.</span>purpleAccent<span class="s2">),</span>
+                      accountName<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Salman_farid&quot;</span><span class="s2">),</span>
+                      accountEmail<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Info@salman.com&quot;</span><span class="s2">),</span>
+                      currentAccountPicture<span class="s4">:</span>Image<span class="s2">.</span>network<span class="s2">(</span><span class="s1">&quot;https://assets.website-files.com/60d251a34163cf29e1220806/626accd8eefaec54f23310ba_flutter%20developer%20logo.png&quot;</span><span class="s2">) ,</span>
+                    <span class="s2">)</span>
+                <span class="s2">),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>home<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Home&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Home&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>email<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Email&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Email: salmanfarid43@gmail.com&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+                ListTile<span class="s2">(</span>
+                    leading<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>phone<span class="s2">),</span>
+                    title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;Phone&quot;</span><span class="s2">),</span>
+                    onTap<span class="s4">: </span><span class="s2">(){</span>MySnackBar<span class="s2">(</span><span class="s1">&quot;Phone:01300192216&quot;</span><span class="s2">, </span>context<span class="s2">);</span>
+                    <span class="s2">}),</span>
+              <span class="s2">],</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          body<span class="s4">:</span>
+          Row<span class="s2">(</span>
+            mainAxisAlignment<span class="s4">: </span>MainAxisAlignment<span class="s2">.</span>spaceEvenly<span class="s2">,</span>
+            children<span class="s4">: </span><span class="s2">[</span>
+              Container<span class="s2">(</span>height<span class="s4">: </span><span class="s5">100</span><span class="s2">,</span>width<span class="s4">: </span><span class="s5">128</span><span class="s2">,</span>child<span class="s4">: </span>Image<span class="s2">.</span>network<span class="s2">(</span><span class="s1">&quot;https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg&quot;</span><span class="s2">)),</span>
+              Container<span class="s2">(</span>height<span class="s4">: </span><span class="s5">100</span><span class="s2">,</span>width<span class="s4">: </span><span class="s5">128</span><span class="s2">,</span>child<span class="s4">: </span>Image<span class="s2">.</span>network<span class="s2">(</span><span class="s1">&quot;https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg&quot;</span><span class="s2">)),</span>
+              Container<span class="s2">(</span>height<span class="s4">: </span><span class="s5">80</span><span class="s2">,</span>width<span class="s4">: </span><span class="s5">110</span><span class="s2">,</span>child<span class="s4">: </span>Image<span class="s2">.</span>network<span class="s2">(</span><span class="s1">&quot;https://i.dailymail.co.uk/1s/2021/04/01/20/41238094-9427989-image-m-4_1617306414954.jpg&quot;</span><span class="s2">)),</span>
+
+
+            <span class="s2">],</span>
+          <span class="s2">)</span>
+
+
+      <span class="s2">);</span>
+
+  <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

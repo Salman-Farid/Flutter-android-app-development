@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #a49c56;}
+.s2 { color: #939293;}
+.s3 { color: #ff6b99; font-style: italic;}
+.s4 { color: #397e83;}
+.s5 { color: #5f9247;}
+</style>
+</head>
+<body bgcolor="#fffaff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre>import <span class="s1">'package:flutter/cupertino.dart'</span><span class="s2">;</span>
+import <span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+
+main<span class="s2">() {</span>
+  runApp<span class="s2">(</span><span class="s3">const </span>MyApp<span class="s2">());</span>
+<span class="s2">}</span>
+
+<span class="s3">class </span>MyApp <span class="s3">extends </span>StatelessWidget <span class="s2">{</span>
+  <span class="s3">const </span>MyApp<span class="s2">({</span><span class="s3">super</span><span class="s2">.</span>key<span class="s2">});</span>
+
+  @override
+  Widget build<span class="s2">(</span>BuildContext context<span class="s2">) {</span>
+    <span class="s3">return </span>MaterialApp<span class="s2">(</span>
+        theme<span class="s4">: </span>ThemeData<span class="s2">(</span>primarySwatch<span class="s4">: </span>Colors<span class="s2">.</span>red<span class="s2">),</span>
+        darkTheme<span class="s4">: </span>ThemeData<span class="s2">(</span>primarySwatch<span class="s4">: </span>Colors<span class="s2">.</span>blue<span class="s2">),</span>
+        color<span class="s4">: </span>Colors<span class="s2">.</span>amber<span class="s2">,</span>
+        debugShowCheckedModeBanner<span class="s4">: </span><span class="s3">false</span><span class="s2">,</span>
+        home<span class="s4">: </span>HomeActivity<span class="s2">());</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s3">class </span>HomeActivity <span class="s3">extends </span>StatelessWidget <span class="s2">{</span>
+  HomeActivity<span class="s2">({</span><span class="s3">super</span><span class="s2">.</span>key<span class="s2">});</span>
+
+  <span class="s3">var </span>Myitems <span class="s4">= </span><span class="s2">[</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2FkZ2V0c3xlbnwwfHwwfHw%3D&amp;w=1000&amp;q=80&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple Iphone&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://www.apple.com/newsroom/images/live-action/april-2021/apple_product-availability-spring21_iphone12-purple_us_04292021_big_carousel.jpg.large.jpg&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple product&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://t3.ftcdn.net/jpg/01/70/80/52/360_F_170805293_mP8dwQvg7ip4tFRyXNs7xhIs470dBArn.jpg&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple Gesture&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://bgr.com/wp-content/uploads/2021/06/prime-day-apple-devices.jpg?quality=82&amp;strip=all&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple House&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1659690822209.jpg-org&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple Macbook&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://www.presse-citron.net/app/uploads/2020/11/test-iphone-12-mini.jpg&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple Beauty&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://mcsolution.com.bd/wp-content/uploads/2022/08/All-Apple-Products-and-Accessories-on-MC-Solution-Apple-Store-in-BD.webp&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple home&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://www.01net.com/app/uploads/2021/04/Apple-iPhone-12-mini_dos.jpg&quot;</span><span class="s2">,</span><span class="s1">&quot;title&quot;</span><span class="s4">:</span><span class="s1">&quot;Apple Lovers&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://thegadgetflow.com/wp-content/uploads/2021/11/Google-Nest-Hub-2nd-Gen-01-1024x574.jpeg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://coolmomtech.com/wp-content/uploads/sites/2/2019/10/yohann-charger.jpg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/10/07/12/best-smart-home-gadgets-indybest.jpg?width=1200&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0oU3kBS61RVcNyqLa5Yrpyfe_uPh2QZG6Sg&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://cdn.pixabay.com/photo/2016/12/09/11/33/smartphone-1894723__480.jpg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://www.ikea.com/images/welcome-to-the-world-of-ikea-home-smart-12682df40d73e7224b04661cd6c44128.jpg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://media.wired.co.uk/photos/606d9a2587b15dc95f9cc242/master/w_1600%2Cc_limit/6.jpg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT62oQlJl6eRIiCOQNc2evKotejgi7xNWBweZ7UuHmYXpboYXajZNk0MnwbYCKP6MicqkE&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://media.homefiniti.com/264/2020/12/17/Low-Res-WM-2-of-172.jpeg&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1MsgyT9cTRnHIhosDeQFYR9f4ajRp6Q9BRiD_ldQfo1iU_C6JagI3E0KyxNQ_a7F33Pc&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9H1jmFtyaS88dXW9NQ8xViHRDUzf8NHStOOna9MzwuQcy5nCP9eQ18TvdnmeWdXH_NjE&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdD0ep9poh4YJuqBF0ky8iLgFgvcPbvgjeSQ1_C-On6MKyhAB6NnppiekG6jJWVnwJHU&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;img&quot;</span><span class="s4">:</span><span class="s1">&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTqRM3ZPV5JJMJEbVxK8u4Y54F7JlsgwzqWAU47qHhdDbv25rrvDiQ0u-tH-mJwxP_rJ4&amp;usqp=CAU&quot;</span><span class="s2">},</span>
+  <span class="s2">];</span>
+
+  mySnackbar<span class="s2">(</span>context<span class="s2">,</span>msg<span class="s2">) {</span>
+    <span class="s3">return </span>ScaffoldMessenger<span class="s2">.</span>of<span class="s2">(</span>context<span class="s2">)</span>
+        <span class="s2">.</span>showSnackBar<span class="s2">(</span>SnackBar<span class="s2">(</span>content<span class="s4">: </span>Text<span class="s2">(</span>msg<span class="s2">)));</span>
+  <span class="s2">}</span>
+
+  @override
+  Widget build<span class="s2">(</span>BuildContext context<span class="s2">) {</span>
+   <span class="s3">return </span>DefaultTabController<span class="s2">(</span>
+       length<span class="s4">:</span><span class="s5">8</span><span class="s2">,</span>
+       child<span class="s4">: </span>Scaffold<span class="s2">(</span>
+         appBar<span class="s4">: </span>AppBar<span class="s2">(</span>
+           title<span class="s4">: </span>Text<span class="s2">(</span><span class="s1">&quot;My App&quot;</span><span class="s2">),</span>
+           bottom<span class="s4">: </span>TabBar<span class="s2">(</span>
+             isScrollable<span class="s4">: </span><span class="s3">true</span><span class="s2">,</span>
+             tabs<span class="s4">: </span><span class="s2">[</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>home<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'Home'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>search<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'search'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>settings<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'settings'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>email<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'emial'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>contact_mail<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'contact'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>person<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'person'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>access_alarm<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'access alarm'</span><span class="s2">,),</span>
+               Tab<span class="s2">(</span>icon<span class="s4">: </span>Icon<span class="s2">(</span>Icons<span class="s2">.</span>account_balance<span class="s2">),</span>text<span class="s4">: </span><span class="s1">'account_balance'</span><span class="s2">,)</span>
+             <span class="s2">],</span>
+           <span class="s2">),</span>
+         <span class="s2">),</span>
+       <span class="s2">)</span>
+   <span class="s2">);</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
